@@ -1,0 +1,88 @@
+:root {
+    --color-main-white: #fff;
+
+    --color-neutral-light: #ced4da;
+    --color-neutral: #fbfbfb;
+    --color-neutral-medium: #efefef;
+    --color-neutral-dark: #929292;
+
+    --color-accent-main: #4ad97d;
+    --color-accent-second: #4199ff;
+    --color-accent-error: #fe616d;
+
+    --color-dark-light: #b4b4b4;
+    --color-dark-medium: #333333;
+
+
+    --font-size-large: 25px;
+    --font-size-big: 20px;
+    --font-size-medium: 15px;
+    --font-size-small: 13px;
+    --font-size-tiny: 12px;
+
+    --font-weight-bold: 700;
+    --font-weight-regular: 400;
+
+    --color-main-dark: #151c26;
+    --color-main-dark-medium: #767a80;
+    --color-main-hover: #fafafa;
+
+    --color-main-medium-light: #edeef1;
+    --color-main-medium: #b8bcc0;
+    --color-main-medium-dark: #8d8d8d;
+
+
+    --color-main-separators: #e1e2e3;
+
+    --color-accent-main-active: #00a259;
+    --color-accent-second-active: #ee9c1f;
+    --color-accent-focus: #49c661;
+    --color-accent-contrast: #a53d00;
+
+    --color-accent-success: #c5f7dc;
+    --color-accent-error-light: #ffcfcb;
+    --color-accent-info: #cde2ff;
+
+    --color-accent-dark: #252d37;
+
+    --color-active: #d8d8d8;
+    --color-inactive: #899096;
+
+    --color-inactive-dark: #7f8388;
+
+
+
+    --color-event-card-bg: #7bbee0;
+
+    --color-input-background: var(--color-main-medium-light);
+
+    --color-social-button-background: #4285f4;
+
+    --color-facebook-button: #1877f2;
+    --color-vk-button: #5181b8;
+
+    /* TODO do not use stupid generated color names */
+    --color-main-black: #000;
+    --color-main-moon-raker: #ccd7f5;
+    --color-main-link-water: #f0f3fb;
+    --color-main-cornflower-blue: #5e82f4;
+    --color-main-white-lilac: #e4e9f5;
+    --color-main-waterloo: #7c7e9e;
+    --color-main-light: #ededed;
+    --color-main-haiti: #121336;
+
+    --color-accent-gigas: #3c3a95;
+    --color-accent-vivid-tangerine: #fe8f7e;
+    --color-accent-wild-watermelon: #fe616d;
+    --color-accent-edit: #f6ce5b;
+
+
+
+
+    --font-family-default: 'Roboto', sans-serif;
+
+    --border-radius-small: 5px;
+    --border-radius-medium: 8px;
+    --border-radius-big: 10px;
+    --border-radius-large: 25px;
+}
