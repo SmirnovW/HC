@@ -39,7 +39,11 @@ export const NotificationsContainer: React.FC<Props> = observer(() => {
     return notificationsStore.notifications.length > 0 ? (
         <Container>
             {notificationsStore.notifications.map((notification) => (
-                <Toast title={notification.title} type={notification.type} />
+                <Toast
+                    key={notification.name}
+                    title={notification.title}
+                    type={notification.type}
+                />
             ))}
         </Container>
     ) : null;

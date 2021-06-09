@@ -43,8 +43,8 @@ export const List: React.FC<Props> = observer(() => {
     return (
         <StyledList>
             {pollsStore.items.length > 0
-                ? pollsStore.items.map((item) => (
-                      <Card key={item.url}>
+                ? pollsStore.items.map((item, index) => (
+                      <Card data-testid={`poll-card-${index}`} key={item.url}>
                           <Link href={item.url}>
                               <Typography
                                   color="dark-medium"

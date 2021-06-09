@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { AllHTMLAttributes } from 'react';
 import s from 'styled-components';
 import { Loader } from '../loader/loader';
 
-type Props = {
+interface Props
+    extends Omit<AllHTMLAttributes<HTMLButtonElement>, 'size' | 'as'> {
     onClick?(event: React.MouseEvent<HTMLButtonElement>): void;
     type?: 'submit' | 'reset' | 'button';
     loading?: boolean;
@@ -10,7 +11,7 @@ type Props = {
     size?: 'tiny' | 'small' | 'medium' | 'big';
     value?: string;
     disabled?: boolean;
-};
+}
 
 const colors = {
     accent: `
@@ -67,6 +68,7 @@ export const Button: React.FC<Props> = ({
     size = 'medium',
     value = '',
     disabled = false,
+    ...restProps
 }) => {
     return (
         <StyledButton
@@ -76,6 +78,7 @@ export const Button: React.FC<Props> = ({
             value={value}
             color={color}
             size={size}
+            {...restProps}
         >
             {loading && (
                 <StyledLoader>

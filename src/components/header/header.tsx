@@ -30,7 +30,9 @@ export const Header: React.FC<Props> = () => {
             <Link to={PATHS.HOME}>
                 <Icon size="large" name="poll" color="accent-main" />
             </Link>
-            <Button onClick={onClick}>Create new poll</Button>
+            <Button data-testid="create-poll-link" onClick={onClick}>
+                Create new poll
+            </Button>
         </StyledHeader>
     );
 };

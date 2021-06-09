@@ -1,22 +1,22 @@
 import { CreatePoll } from 'forms/createPoll';
-import React, { useEffect } from 'react';
+import { observer } from 'mobx-react-lite';
+import React, { useEffect, useState } from 'react';
 import { useStores } from 'store';
 
 /**
  * Abandoned Component
  */
-export const Abandoned: React.FC = () => {
+export const Abandoned: React.FC = observer(() => {
     const { notificationsStore } = useStores();
     let data = {
         question: '',
         choices: ['', ''],
     };
 
-    const abandonedPollData = localStorage.getItem('abandoned_poll');
+    const abandonedPollData = window.localStorage.getItem('abandoned_poll');
 
     if (abandonedPollData) {
         data = JSON.parse(abandonedPollData);
-        localStorage.removeItem('abandoned_poll');
     }
 
     useEffect(() => {
@@ -24,4 +24,4 @@ export const Abandoned: React.FC = () => {
     });
 
     return <CreatePoll data={data} />;
-};
+});

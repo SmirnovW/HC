@@ -18,6 +18,7 @@ export class Polls {
             items: observable,
             errors: observable,
             fetch: action,
+            setErrors: action,
         });
         this.notificationsStore = notificationsStore;
     }
@@ -75,5 +76,9 @@ export class Polls {
                 };
             });
         });
+    }
+
+    setErrors(errors: Record<string, any>) {
+        this.errors = errors;
     }
 }

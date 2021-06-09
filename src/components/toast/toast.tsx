@@ -14,15 +14,24 @@ type Props = {
 };
 
 const colors = {
-    [EnumsNotificationTypes.ABANDONED]: 'accent-success',
+    [EnumsNotificationTypes.ABANDONED]: 'accent-edit',
     [EnumsNotificationTypes.SUCCESS]: 'accent-success',
     [EnumsNotificationTypes.ERROR]: 'accent-error-light',
+    [EnumsNotificationTypes.ATTENTION]: 'accent-edit',
 };
 
 const iconColors = {
-    [EnumsNotificationTypes.ABANDONED]: 'accent-focus',
+    [EnumsNotificationTypes.ABANDONED]: 'accent-contrast',
     [EnumsNotificationTypes.SUCCESS]: 'accent-focus',
     [EnumsNotificationTypes.ERROR]: 'accent-error',
+    [EnumsNotificationTypes.ATTENTION]: 'accent-contrast',
+};
+
+const icons = {
+    [EnumsNotificationTypes.ABANDONED]: 'attention',
+    [EnumsNotificationTypes.SUCCESS]: 'check',
+    [EnumsNotificationTypes.ERROR]: 'error',
+    [EnumsNotificationTypes.ATTENTION]: 'attention',
 };
 
 type ToastContainerProps = {
@@ -49,7 +58,7 @@ export const Toast: React.FC<Props> = (props) => {
         <ToastContainer type={props.type}>
             <IconWrapper>
                 <Icon
-                    name="check"
+                    name={icons[props.type]}
                     size="small"
                     color={iconColors[props.type]}
                 />

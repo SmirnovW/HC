@@ -13,13 +13,12 @@ export class NotificationsStore implements InterfaceNotificationsStore {
     }
 
     addNotification(notification: InterfaceNotification) {
-        console.log('notification');
         this.notifications.push(notification);
 
         if (notification.expire !== 0) {
             setTimeout(
                 () => {
-                    this.removeNotification();
+                    this.removeNotificationByName(notification.name);
                 },
                 notification?.expire ? notification.expire : 3000
             );

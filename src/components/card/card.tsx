@@ -21,6 +21,14 @@ const StyledCard = s.div`
 /**
  * Card Component
  */
-export const Card: React.FC<Props> = ({ className = '', children }) => {
-    return <StyledCard className={className}>{children}</StyledCard>;
+export const Card: React.FC<Props> = ({
+    className = '',
+    children,
+    ...restProps
+}) => {
+    return (
+        <StyledCard className={className} {...restProps}>
+            {children}
+        </StyledCard>
+    );
 };

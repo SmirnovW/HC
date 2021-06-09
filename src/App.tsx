@@ -7,30 +7,17 @@ import './css/variables.css';
 
 import { Router } from 'router/router';
 import { Header } from 'components/header';
-import { CreatePoll } from 'forms/createPoll';
 import { NotificationsContainer } from 'components/notificationsContainer';
 import { useStores } from 'store';
 import { EnumsNotificationTypes } from 'store/notifications/enums';
-
-const OfflineMode = () => {
-    return (
-        <div>
-            <p>Oops, it seems the Vodafone doesn't work... Again... 😑</p>
-            <p>
-                But you can create a poll and it would be added after the
-                Vodafone connection will work again... 😅
-            </p>
-            <CreatePoll />
-        </div>
-    );
-};
+import { OfflineMode } from 'components/offlineMode/offlineMode';
 
 function App() {
     const { notificationsStore } = useStores();
     const state = useNetworkState();
 
     useEffect(() => {
-        if (localStorage.getItem('abandoned_poll')) {
+        if (window.localStorage.getItem('abandoned_poll')) {
             notificationsStore.addNotification({
                 name: 'abandoned_poll',
                 title: 'You have abandoned poll.',

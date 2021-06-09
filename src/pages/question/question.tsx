@@ -59,12 +59,17 @@ export const Question: React.FC = observer(() => {
 
     return (
         <Container>
-            <Typography as="h1" fontSize="large" fontWeight="bold">
+            <Typography
+                data-testid="question-title"
+                as="h1"
+                fontSize="large"
+                fontWeight="bold"
+            >
                 {questionStore.data?.question}
             </Typography>
             {questionStore.data ? (
                 <>
-                    {questionStore.data?.choices.map((choice) => {
+                    {questionStore.data?.choices.map((choice, index) => {
                         const percentage = questionStore.data?.votesCount
                             ? (choice.votes * 100) /
                               questionStore.data?.votesCount
@@ -77,6 +82,7 @@ export const Question: React.FC = observer(() => {
                                     onChange={setChoice}
                                     name="choice"
                                     value={choice.id}
+                                    data-testid={`poll-choice-${index}`}
                                 />
                                 <Progress percentage={Math.ceil(percentage)} />
                                 <Typography
@@ -96,6 +102,7 @@ export const Question: React.FC = observer(() => {
                     <Button
                         onClick={voteForChoice}
                         color="accent"
+                        data-testid="submit-vote-button"
                         disabled={!Boolean(choiceId)}
                     >
                         Submit your vote

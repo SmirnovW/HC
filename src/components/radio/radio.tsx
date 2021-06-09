@@ -55,9 +55,10 @@ export const Radio: React.FC<Props> = ({
     onChange,
     label,
     value,
+    ...restProps
 }) => {
     return (
-        <StyledLabel htmlFor={id}>
+        <StyledLabel htmlFor={id} {...restProps}>
             <StyledInputContainer>
                 <input
                     onChange={onChange}
