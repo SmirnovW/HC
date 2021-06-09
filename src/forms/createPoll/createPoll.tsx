@@ -4,7 +4,7 @@ import { useHistory } from 'react-router';
 import { useStores } from 'store';
 import { Typography } from 'components/typography';
 import { Button } from 'components/button';
-import { Input } from 'components/input/input';
+import { Input } from 'components/input';
 import { observer } from 'mobx-react-lite';
 import { useNetworkState } from 'react-use';
 import { EnumsNotificationTypes } from 'store/notifications/enums';

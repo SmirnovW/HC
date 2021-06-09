@@ -11,11 +11,11 @@ interface Sizes {
     [name: string]: number | string;
 }
 
-const icons: Icons = {
+export const icons: Icons = {
     ...commonIcons,
 };
 
-type Props = {
+export type Props = {
     /**
      * Icon name.
      */

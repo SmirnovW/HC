@@ -6,8 +6,13 @@
 
 ## How to test
 
-In order to run the dev server locally, without using Docker, please make sure:
-In order to run the e2e test folle nest steps:
+In order to run the e2e test follow next steps:
 
 -   `yarn start` - run dev build
 -   `yarn cypress` - to run cypress
+
+## Storybook
+
+In order to run the storybook:
+
+-   `yarn storybook` - to run Storybook
