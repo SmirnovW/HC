@@ -11,7 +11,7 @@ export const Home: React.FC = () => {
 
     useEffect(() => {
         pollsStore.fetch();
-    }, []);
+    }, [pollsStore]);
 
     return (
         <>

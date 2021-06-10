@@ -1,6 +1,6 @@
 import { CreatePoll } from 'forms/createPoll';
 import { observer } from 'mobx-react-lite';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useStores } from 'store';
 
 /**
