@@ -25,7 +25,7 @@ function App() {
                 expire: 0,
             });
         }
-    });
+    }, [notificationsStore]);
 
     return (
         <BrowserRouter>

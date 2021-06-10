@@ -21,7 +21,7 @@ export const Abandoned: React.FC = observer(() => {
 
     useEffect(() => {
         notificationsStore.removeNotificationByName('abandoned_poll');
-    });
+    }, [notificationsStore]);
 
     return <CreatePoll data={data} />;
 });
