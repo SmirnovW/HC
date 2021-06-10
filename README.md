@@ -1,14 +1,14 @@
 ## How to start
 
 -   `yarn install` - install dependencies
--   `yarn start` - run dev build
--   `yarn build` - build project
+-   `yarn dev` - run dev build
+-   `yarn start` - build project
 
 ## How to test
 
 In order to run the e2e test follow next steps:
 
--   `yarn start` - run dev build
+-   `yarn dev` - run dev build
 -   `yarn cypress` - to run cypress
 
 ## Storybook
