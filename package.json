@@ -83,7 +83,6 @@
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.9",
     "cypress": "^7.4.0",
-    "prettier": "2.3.0",
-    "react-styleguidist": "^11.1.7"
+    "prettier": "2.3.0"
   }
 }
